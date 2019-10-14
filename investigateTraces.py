@@ -70,7 +70,7 @@ def tracesStats():
             pom3 = calculateStats(pom2, feature)
             dic[operation][feature] = pom3
 
-    storeJsons(dic, "/home/jasminb/PycharmProjects/AIOps/")
+    storeJsons(dic, "./")
 
         #lista.append(dic)
 
