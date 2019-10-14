@@ -1,5 +1,5 @@
 # Multi-source Dataset of IT Observability Data forAIOps Research
-This repository contains all the implementation details, code, and the multi-source distributed system dataset.
+This repository contains the implementation details, code, and the multi-source distributed system dataset.
 
 You may find details of this dataset from the original paper: 
 
