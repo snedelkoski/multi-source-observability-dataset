@@ -3,7 +3,7 @@ This repository contains all the implementation details, code, and the multi-sou
 
 You may find details of this dataset from the original paper: 
 
-*Sasho Nedelkoski et al., "A Multi-source Dataset of IT Observability Data for AIOps Research".*
+*Sasho Nedelkoski, Ajay Kumar Mandapati, Jasmin Bogatinovski, Soeren Becker, Jorge Cardoso, Odej Kao, "A Multi-source Dataset of IT Observability Data for AIOps Research".*
 
 <b>If you use the data, implementation, or any details of the paper, please cite!</b>
 
