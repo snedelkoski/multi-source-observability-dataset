@@ -14,5 +14,7 @@ The difference of the *<b>concurrent</b>* dataset is that:
 2. Three rally actions are executed in parallel: boot_and_delete, create_and_delete_networks, create_and_delete_image, whereas for the *<b>sequential</b>* there were 5 actions executed. 
 
 The raw logs in both datasets contain the same files. If the user wants the logs filetered by time with respect to the two datasets, should refer to the timestamps at the metrics (they provide the time window). <b>In addition, we suggest to use the provided aggregated time ranged logs for both datasets in CSV format.
+  
+<b>Important:</b> The logs and the metrics are synchronized with respect time and they are both recorded on CEST (central european standard time). The traces are on UTC (Coordinated Universal Time -2 hours).
 
 If you are interested in these data, please request the data via <a href="url">Zenodo</a>. Kindly note that the affiliation, and information about the utilization of the dataset. If you do not receive any response from Zenodo within one week, please check your spam mailbox or consider to resubmit your data request with the required information.
