@@ -1,9 +1,9 @@
-# Multi-source Dataset of IT Observability Data forAIOps Research
+# Multi-Source Distributed System Data for AI-powered Analytics
 This repository contains the simple scripts for data statistics, and link to the multi-source distributed system dataset.
 
 You may find details of this dataset from the original paper: 
 
-*Sasho Nedelkoski, Ajay Kumar Mandapati, Jasmin Bogatinovski, Soeren Becker, Jorge Cardoso, Odej Kao, "A Multi-source Dataset of IT Observability Data for AIOps Research".* [link very soon]
+*Sasho Nedelkoski, Ajay Kumar Mandapati, Jasmin Bogatinovski, Soeren Becker, Jorge Cardoso, Odej Kao, "Multi-Source Distributed System Data for AI-powered Analytics".* [link very soon]
 
 <b>If you use the data, implementation, or any details of the paper, please cite!</b>
 
