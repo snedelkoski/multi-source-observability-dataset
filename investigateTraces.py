@@ -109,7 +109,6 @@ def propertiesPerFeature():
         if len(pomm) != 4:
             if "rpc" not in pomm:
                 d["rpc"] = 0
-                continue
             if "wsgi" not in pomm:
                 d["wsgi"] = 0
             if "vif" not in pomm:
