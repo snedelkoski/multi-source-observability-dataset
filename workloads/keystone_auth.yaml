@@ -1,0 +1,30 @@
+---
+  Authenticate.keystone:
+    -
+      runner:
+        type: "constant_for_duration"
+        duration: 40
+        concurrency: 5
+      context:
+        users:
+          tenants: 1
+          users_per_tenant: 1
+      hooks:
+        -
+          name: fault_injection
+          args:
+            action: restart memcached container on wally113
+          trigger:
+            name: event
+            args:
+              unit: iteration
+              at: [10]
+        -
+          name: fault_injection
+          args:
+            action: restart nova-api container on wally113
+          trigger:
+            name: event
+            args:
+              unit: time
+              at: [30]

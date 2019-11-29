@@ -1,0 +1,28 @@
+---
+  NeutronNetworks.create_and_delete_networks:
+    -
+      args:
+        network_create_args: {}
+      runner:
+        type: "constant"
+        times: 6000
+        concurrency: 1
+      context:
+        users:
+          tenants: 3
+          users_per_tenant: 3
+        quotas:
+          neutron:
+            network: -1
+      sla:
+        failure_rate:
+          max: 100
+      hooks:
+        - name: sys_call
+          description: Run script
+          args: sh ./restart_neutron_container.sh
+          trigger:
+            name: event
+            args:
+              unit: iteration
+              at: [500,1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000]

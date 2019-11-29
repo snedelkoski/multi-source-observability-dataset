@@ -1,0 +1,545 @@
+{
+  "info": {
+    "started": 0,
+    "last_trace_started": 8727,
+    "finished": 10058,
+    "name": "total"
+  },
+  "stats": {
+    "wsgi": {
+      "count": 12,
+      "duration": 6764
+    }
+  },
+  "children": [
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "public",
+        "started": 0,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "public",
+          "timestamp": "2019-11-18T12:19:05.147722",
+          "trace_id": "116851fb-890f-46f7-a753-0dac94d55499",
+          "project": "keystone",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 102,
+        "project": "keystone",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/",
+              "scheme": "http",
+              "method": "GET",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "public",
+          "timestamp": "2019-11-18T12:19:05.045692",
+          "trace_id": "116851fb-890f-46f7-a753-0dac94d55499",
+          "project": "keystone",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "116851fb-890f-46f7-a753-0dac94d55499",
+      "children": []
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "public",
+        "started": 161,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "public",
+          "timestamp": "2019-11-18T12:19:05.608341",
+          "trace_id": "895c37bf-1035-44ac-809b-4ceaa02c4de6",
+          "project": "keystone",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 562,
+        "project": "keystone",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/v3/auth/tokens",
+              "scheme": "http",
+              "method": "POST",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "public",
+          "timestamp": "2019-11-18T12:19:05.207285",
+          "trace_id": "895c37bf-1035-44ac-809b-4ceaa02c4de6",
+          "project": "keystone",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "895c37bf-1035-44ac-809b-4ceaa02c4de6",
+      "children": []
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "public",
+        "started": 676,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "public",
+          "timestamp": "2019-11-18T12:19:05.772028",
+          "trace_id": "5d42aa64-016e-4e07-b1f9-5228ed926a71",
+          "project": "keystone",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 726,
+        "project": "keystone",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/",
+              "scheme": "http",
+              "method": "GET",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "public",
+          "timestamp": "2019-11-18T12:19:05.722138",
+          "trace_id": "5d42aa64-016e-4e07-b1f9-5228ed926a71",
+          "project": "keystone",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "5d42aa64-016e-4e07-b1f9-5228ed926a71",
+      "children": []
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "public",
+        "started": 857,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "public",
+          "timestamp": "2019-11-18T12:19:06.237228",
+          "trace_id": "2c937f51-57b7-401c-84ea-0458abcac204",
+          "project": "keystone",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 1191,
+        "project": "keystone",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/v3/auth/tokens",
+              "scheme": "http",
+              "method": "POST",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "public",
+          "timestamp": "2019-11-18T12:19:05.903666",
+          "trace_id": "2c937f51-57b7-401c-84ea-0458abcac204",
+          "project": "keystone",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "2c937f51-57b7-401c-84ea-0458abcac204",
+      "children": []
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "api",
+        "started": 1261,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:06.558746",
+          "trace_id": "24968a47-2031-4765-898e-69a65572f188",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 1513,
+        "project": "glance",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/v2/schemas/image",
+              "scheme": "http",
+              "method": "GET",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:06.306821",
+          "trace_id": "24968a47-2031-4765-898e-69a65572f188",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "24968a47-2031-4765-898e-69a65572f188",
+      "children": [
+        {
+          "info": {
+            "exception": "None",
+            "name": "wsgi",
+            "service": "public",
+            "started": 1329,
+            "meta.raw_payload.wsgi-stop": {
+              "info": {
+                "host": "wally113"
+              },
+              "name": "wsgi-stop",
+              "service": "public",
+              "timestamp": "2019-11-18T12:19:06.491599",
+              "trace_id": "7967078c-ef88-420b-aca7-1e6fdf0837b6",
+              "project": "keystone",
+              "parent_id": "24968a47-2031-4765-898e-69a65572f188",
+              "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+            },
+            "finished": 1445,
+            "project": "keystone",
+            "host": "wally113",
+            "meta.raw_payload.wsgi-start": {
+              "info": {
+                "host": "wally113",
+                "request": {
+                  "path": "/v3/auth/tokens",
+                  "scheme": "http",
+                  "method": "GET",
+                  "query": ""
+                }
+              },
+              "name": "wsgi-start",
+              "service": "public",
+              "timestamp": "2019-11-18T12:19:06.375032",
+              "trace_id": "7967078c-ef88-420b-aca7-1e6fdf0837b6",
+              "project": "keystone",
+              "parent_id": "24968a47-2031-4765-898e-69a65572f188",
+              "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+            }
+          },
+          "parent_id": "24968a47-2031-4765-898e-69a65572f188",
+          "trace_id": "7967078c-ef88-420b-aca7-1e6fdf0837b6",
+          "children": []
+        }
+      ]
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "api",
+        "started": 1617,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:06.815019",
+          "trace_id": "64395150-5826-43dd-95a5-88d615f80483",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 1769,
+        "project": "glance",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/v2/images",
+              "scheme": "http",
+              "method": "POST",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:06.663114",
+          "trace_id": "64395150-5826-43dd-95a5-88d615f80483",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "64395150-5826-43dd-95a5-88d615f80483",
+      "children": []
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "api",
+        "started": 3861,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:08.976930",
+          "trace_id": "2420a5b6-9d3d-4a2c-a09c-f221038deb86",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 3931,
+        "project": "glance",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/v2/images/985aa609-db14-4b4f-abd1-f1e1521237c7",
+              "scheme": "http",
+              "method": "GET",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:08.906980",
+          "trace_id": "2420a5b6-9d3d-4a2c-a09c-f221038deb86",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "2420a5b6-9d3d-4a2c-a09c-f221038deb86",
+      "children": []
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "api",
+        "started": 4044,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:09.189027",
+          "trace_id": "eb43c33e-6381-4df6-b76d-55df14695cf0",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 4143,
+        "project": "glance",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/v2/schemas/image",
+              "scheme": "http",
+              "method": "GET",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:09.090110",
+          "trace_id": "eb43c33e-6381-4df6-b76d-55df14695cf0",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "eb43c33e-6381-4df6-b76d-55df14695cf0",
+      "children": []
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "api",
+        "started": 4642,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:13.407117",
+          "trace_id": "3ef6f663-e000-4b58-84f7-aeeb929e4dc3",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 8361,
+        "project": "glance",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/v2/images/985aa609-db14-4b4f-abd1-f1e1521237c7/file",
+              "scheme": "http",
+              "method": "PUT",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:09.688067",
+          "trace_id": "3ef6f663-e000-4b58-84f7-aeeb929e4dc3",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "3ef6f663-e000-4b58-84f7-aeeb929e4dc3",
+      "children": []
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "api",
+        "started": 8468,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:13.652612",
+          "trace_id": "eb1ec797-7411-4a6e-97ef-33449a5537d3",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 8606,
+        "project": "glance",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/v2/images/985aa609-db14-4b4f-abd1-f1e1521237c7",
+              "scheme": "http",
+              "method": "GET",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:13.513819",
+          "trace_id": "eb1ec797-7411-4a6e-97ef-33449a5537d3",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "eb1ec797-7411-4a6e-97ef-33449a5537d3",
+      "children": []
+    },
+    {
+      "info": {
+        "exception": "None",
+        "name": "wsgi",
+        "service": "api",
+        "started": 8727,
+        "meta.raw_payload.wsgi-stop": {
+          "info": {
+            "host": "wally113"
+          },
+          "name": "wsgi-stop",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:15.103720",
+          "trace_id": "4c6b7f84-4cd0-476a-beef-b11c77cc4033",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        },
+        "finished": 10058,
+        "project": "glance",
+        "host": "wally113",
+        "meta.raw_payload.wsgi-start": {
+          "info": {
+            "host": "wally113",
+            "request": {
+              "path": "/v2/images/985aa609-db14-4b4f-abd1-f1e1521237c7",
+              "scheme": "http",
+              "method": "DELETE",
+              "query": ""
+            }
+          },
+          "name": "wsgi-start",
+          "service": "api",
+          "timestamp": "2019-11-18T12:19:13.773141",
+          "trace_id": "4c6b7f84-4cd0-476a-beef-b11c77cc4033",
+          "project": "glance",
+          "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+          "base_id": "8f6ff588-fcb6-4983-883c-282f78922756"
+        }
+      },
+      "parent_id": "8f6ff588-fcb6-4983-883c-282f78922756",
+      "trace_id": "4c6b7f84-4cd0-476a-beef-b11c77cc4033",
+      "children": []
+    }
+  ]
+}

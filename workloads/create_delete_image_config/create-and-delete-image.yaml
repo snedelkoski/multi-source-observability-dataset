@@ -1,0 +1,27 @@
+---
+  GlanceImages.create_and_delete_image:
+    -
+      args:
+        image_location: "http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img"
+        container_format: "bare"
+        disk_format: "qcow2"
+      runner:
+        type: "constant"
+        times: 3000
+        concurrency: 5
+      context:
+        users:
+          tenants: 2
+          users_per_tenant: 3
+      sla:
+        failure_rate:
+          max: 100
+      hooks:
+        - name: sys_call
+          description: Run script
+          args: sh ./restart_glance_container.sh
+          trigger:
+            name: event
+            args:
+              unit: iteration
+              at: [250,500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000]

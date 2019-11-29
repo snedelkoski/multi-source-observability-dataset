@@ -1,0 +1,173 @@
+cloud_management:
+  driver: universal
+node_discover:
+  driver: node_list
+  args:
+    - ip: 130.149.249.123  # role: controller
+      fqdn: wally113
+      auth:
+        username: rally
+        private_key_file: /home/rally/.ssh/id_rsa
+        become_password: rally
+    - ip: 130.149.249.132  # role: compute
+      fqdn: wally122
+      auth:
+        username: rally
+        private_key_file: /home/rally/.ssh/id_rsa
+        become_password: rally
+    - ip: 130.149.249.134  # role: compute
+      fqdn: wally124
+      auth:
+        username: rally
+        private_key_file: /home/rally/.ssh/id_rsa
+        become_password: rally
+    - ip: 130.149.249.133  # role: compute
+      fqdn: wally123
+      auth:
+        username: rally
+        private_key_file: /home/rally/.ssh/id_rsa
+        become_password: rally
+
+    - ip: 130.149.249.127 # role: compute
+      fqdn: wally117
+      auth:
+        username: rally
+        private_key_file: /home/rally/.ssh/id_rsa
+        become_password: rally
+
+containers:
+  cinder_api:
+    driver: docker_container
+    args:
+      container_name: cinder_api
+    hosts:
+    - 130.149.249.123
+  cinder_volume:
+    driver: docker_container
+    args:
+      container_name: cinder_volume
+    hosts:
+    - 130.149.249.123
+    - 130.149.249.132
+    - 130.149.249.134
+    - 130.149.249.133
+    - 130.149.249.127
+    
+  glance_api:
+    driver: docker_container
+    args:
+      container_name: glance_api
+    hosts:
+    - 130.149.249.123
+  heat_api:
+    driver: docker_container
+    args:
+      container_name: heat_api
+    hosts:
+    - 130.149.249.123
+  heat_engine:
+    driver: docker_container
+    args:
+      container_name: heat_engine
+    hosts:
+    - 130.149.249.123
+  keystone:
+    driver: docker_container
+    args:
+      container_name: keystone
+    hosts:
+    - 130.149.249.123
+  memcached:
+    driver: docker_container
+    args:
+      container_name: memcached
+    hosts:
+    - 130.149.249.123
+  neutron_server:
+    driver: docker_container
+    args:
+      container_name: neutron_server
+    hosts:
+    - 130.149.249.123
+  neutron_dhcp_agent:
+    driver: docker_container
+    args:
+      container_name: neutron_dhcp_agent
+    hosts:
+    - 130.149.249.123
+  neutron_l3_agent:
+    driver: docker_container
+    args:
+      container_name: neutron_l3_agent
+    hosts:
+    - 130.149.249.123
+  neutron_metadata_agent:
+    driver: docker_container
+    args:
+      container_name: neutron_metadata_agent
+    hosts:
+    - 130.149.249.123
+  neutron_openvswitch_agent:
+    driver: docker_container
+    args:
+      container_name: neutron_openvswitch_agent
+    hosts:
+    - 130.149.249.123
+    - 130.149.249.132
+    - 130.149.249.134
+    - 130.149.249.133
+    - 130.149.249.127
+    
+  nova_api:
+    driver: docker_container
+    args:
+      container_name: nova_api
+    hosts:
+    - 130.149.249.123
+  nova_compute:
+    driver: docker_container
+    args:
+      container_name: nova_compute
+    hosts:
+    - 130.149.249.132
+    - 130.149.249.134
+    - 130.149.249.133
+    - 130.149.249.127
+  nova_conductor:
+    driver: docker_container
+    args:
+      container_name: nova_conductor
+    hosts:
+    - 130.149.249.123
+  nova_scheduler:
+    driver: docker_container
+    args:
+      container_name: nova_scheduler
+    hosts:
+    - 130.149.249.123
+  ovsdb_server:
+    driver: docker_container
+    args:
+      container_name: openvswitch_db
+    hosts:
+    - 130.149.249.123
+    - 130.149.249.132
+    - 130.149.249.134
+    - 130.149.249.133
+    - 130.149.249.127
+  ovs_vswitchd:
+    driver: docker_container
+    args:
+      container_name: openvswitch_vswitchd
+    hosts:
+    - 130.149.249.123
+    - 130.149.249.132
+    - 130.149.249.134
+    - 130.149.249.133
+    - 130.149.249.127
+  rabbitmq:
+    driver: docker_container
+    args:
+      container_name: rabbitmq
+    hosts:
+    - 130.149.249.123

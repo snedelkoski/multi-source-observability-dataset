@@ -1,0 +1,1371 @@
+{
+    "info": {
+        "generated_at": "2019-11-18T15:37:37", 
+        "rally_version": "1.5.1", 
+        "format_version": "1.2"
+    }, 
+    "tasks": [
+        {
+            "uuid": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+            "title": "", 
+            "description": "", 
+            "status": "finished", 
+            "tags": [], 
+            "env_uuid": "45b32c37-9dbc-4e40-ac9a-2abb7f284bb9", 
+            "env_name": "sashojasmin", 
+            "created_at": "2019-11-18T15:36:05", 
+            "updated_at": "2019-11-18T15:37:24", 
+            "pass_sla": true, 
+            "subtasks": [
+                {
+                    "uuid": "c791d103-987c-4339-8820-339b458da32b", 
+                    "title": "GlanceImages.create_and_delete_image", 
+                    "description": "", 
+                    "status": "finished", 
+                    "created_at": "2019-11-18T15:36:12", 
+                    "updated_at": "2019-11-18T15:37:24", 
+                    "sla": {}, 
+                    "workloads": [
+                        {
+                            "uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                            "description": "Create and then delete an image.", 
+                            "runner": {
+                                "constant": {
+                                    "concurrency": 5, 
+                                    "times": 20
+                                }
+                            }, 
+                            "hooks": [
+                                {
+                                    "config": {
+                                        "action": {
+                                            "sys_call": "sh /home/rally/data/list_image_config/restart_glance_container.sh"
+                                        }, 
+                                        "trigger": {
+                                            "event": {
+                                                "at": [
+                                                    100, 
+                                                    200, 
+                                                    300, 
+                                                    400, 
+                                                    500
+                                                ], 
+                                                "unit": "iteration"
+                                            }
+                                        }, 
+                                        "description": "Run script"
+                                    }, 
+                                    "results": [], 
+                                    "summary": {}
+                                }
+                            ], 
+                            "scenario": {
+                                "GlanceImages.create_and_delete_image": {
+                                    "image_location": "http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img", 
+                                    "disk_format": "qcow2", 
+                                    "container_format": "bare"
+                                }
+                            }, 
+                            "min_duration": 10.263727903366089, 
+                            "max_duration": 16.627405166625977, 
+                            "start_time": 1574091377.69668, 
+                            "load_duration": 60.73102903366089, 
+                            "full_duration": 71.63344097137451, 
+                            "statistics": {
+                                "durations": {
+                                    "total": {
+                                        "data": {
+                                            "success": "100.0%", 
+                                            "min": 10.264, 
+                                            "max": 16.627, 
+                                            "median": 13.469, 
+                                            "95%ile": 16.493, 
+                                            "iteration_count": 20, 
+                                            "avg": 13.467, 
+                                            "90%ile": 15.989
+                                        }, 
+                                        "display_name": "total", 
+                                        "name": "total", 
+                                        "count_per_iteration": 1, 
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "success": "100.0%", 
+                                                    "min": 10.264, 
+                                                    "max": 16.627, 
+                                                    "median": 13.469, 
+                                                    "95%ile": 16.493, 
+                                                    "iteration_count": 20, 
+                                                    "avg": 13.467, 
+                                                    "90%ile": 15.989
+                                                }, 
+                                                "display_name": "duration", 
+                                                "name": "duration", 
+                                                "count_per_iteration": 1, 
+                                                "children": []
+                                            }, 
+                                            {
+                                                "data": {
+                                                    "success": "100.0%", 
+                                                    "min": 0.0, 
+                                                    "max": 0.0, 
+                                                    "median": 0.0, 
+                                                    "95%ile": 0.0, 
+                                                    "iteration_count": 20, 
+                                                    "avg": 0.0, 
+                                                    "90%ile": 0.0
+                                                }, 
+                                                "display_name": "idle_duration", 
+                                                "name": "idle_duration", 
+                                                "count_per_iteration": 1, 
+                                                "children": []
+                                            }
+                                        ]
+                                    }, 
+                                    "atomics": [
+                                        {
+                                            "data": {
+                                                "success": "100.0%", 
+                                                "min": 7.673, 
+                                                "max": 13.325, 
+                                                "median": 10.013, 
+                                                "95%ile": 11.258, 
+                                                "iteration_count": 20, 
+                                                "avg": 9.948, 
+                                                "90%ile": 10.91
+                                            }, 
+                                            "display_name": "glance_v2.create_image", 
+                                            "name": "glance_v2.create_image", 
+                                            "count_per_iteration": 1, 
+                                            "children": [
+                                                {
+                                                    "data": {
+                                                        "success": "100.0%", 
+                                                        "min": 0.569, 
+                                                        "max": 4.187, 
+                                                        "median": 0.925, 
+                                                        "95%ile": 1.535, 
+                                                        "iteration_count": 20, 
+                                                        "avg": 1.104, 
+                                                        "90%ile": 1.393
+                                                    }, 
+                                                    "display_name": "glance_v2.get_image (x2)", 
+                                                    "name": "glance_v2.get_image", 
+                                                    "count_per_iteration": 2, 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "data": {
+                                                        "success": "100.0%", 
+                                                        "min": 3.574, 
+                                                        "max": 6.933, 
+                                                        "median": 5.646, 
+                                                        "95%ile": 6.899, 
+                                                        "iteration_count": 20, 
+                                                        "avg": 5.621, 
+                                                        "90%ile": 6.802
+                                                    }, 
+                                                    "display_name": "glance_v2.upload_data", 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "count_per_iteration": 1, 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "data": {
+                                                "success": "100.0%", 
+                                                "min": 1.77, 
+                                                "max": 6.033, 
+                                                "median": 3.378, 
+                                                "95%ile": 5.714, 
+                                                "iteration_count": 20, 
+                                                "avg": 3.519, 
+                                                "90%ile": 5.198
+                                            }, 
+                                            "display_name": "glance_v2.delete_image", 
+                                            "name": "glance_v2.delete_image", 
+                                            "count_per_iteration": 1, 
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            }, 
+                            "data": [
+                                {
+                                    "timestamp": 1574091377.69668, 
+                                    "error": [], 
+                                    "duration": 15.723855018615723, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 2, 
+                                                    "trace_id": "4d602b85-0b50-447f-8a0a-38ad25d86825", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091388.846008, 
+                                            "started_at": 1574091377.696765, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091381.698961, 
+                                                    "started_at": 1574091381.235449, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091388.596678, 
+                                                    "started_at": 1574091381.699061, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091388.845941, 
+                                                    "started_at": 1574091388.596761, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091393.420526, 
+                                            "started_at": 1574091388.846066, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091377.932008, 
+                                    "error": [], 
+                                    "duration": 12.067955017089844, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 3, 
+                                                    "trace_id": "05780d22-8844-4b1a-85a4-3f4f970938e7", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091387.933104, 
+                                            "started_at": 1574091377.93207, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091382.100157, 
+                                                    "started_at": 1574091381.405077, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091387.566887, 
+                                                    "started_at": 1574091382.100276, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091387.932976, 
+                                                    "started_at": 1574091387.567037, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091389.999953, 
+                                            "started_at": 1574091387.93324, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091378.192713, 
+                                    "error": [], 
+                                    "duration": 12.469656944274902, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 5, 
+                                                    "trace_id": "68c9d45f-e821-4729-8803-7c7a6795103f", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091387.346004, 
+                                            "started_at": 1574091378.192822, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091382.415169, 
+                                                    "started_at": 1574091381.566027, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091387.093095, 
+                                                    "started_at": 1574091382.415266, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091387.34586, 
+                                                    "started_at": 1574091387.093208, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091390.662361, 
+                                            "started_at": 1574091387.346116, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091378.193079, 
+                                    "error": [], 
+                                    "duration": 12.469290971755981, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 4, 
+                                                    "trace_id": "7f30358b-049c-4e0e-a2f7-da3ae1d1a75f", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091387.79049, 
+                                            "started_at": 1574091378.193188, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091382.099999, 
+                                                    "started_at": 1574091381.443571, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091387.395581, 
+                                                    "started_at": 1574091382.100127, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091387.790406, 
+                                                    "started_at": 1574091387.395749, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091390.662361, 
+                                            "started_at": 1574091387.790602, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091378.400481, 
+                                    "error": [], 
+                                    "duration": 14.7677640914917, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 1, 
+                                                    "trace_id": "544dd1f7-22d6-4ff6-a3bb-b855aab57b6d", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091388.895889, 
+                                            "started_at": 1574091378.400543, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091382.475936, 
+                                                    "started_at": 1574091381.692975, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091388.594883, 
+                                                    "started_at": 1574091382.476036, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091388.895767, 
+                                                    "started_at": 1574091388.594979, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091393.168237, 
+                                            "started_at": 1574091388.895955, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091391.684914, 
+                                    "error": [], 
+                                    "duration": 14.175550937652588, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 6, 
+                                                    "trace_id": "bee72047-662d-4fd8-a4ed-2a7d3a8db1fd", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091402.365757, 
+                                            "started_at": 1574091391.684934, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091395.05557, 
+                                                    "started_at": 1574091394.675748, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091401.846927, 
+                                                    "started_at": 1574091395.055654, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091402.365687, 
+                                                    "started_at": 1574091401.847014, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091405.860456, 
+                                            "started_at": 1574091402.365806, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091392.368785, 
+                                    "error": [], 
+                                    "duration": 12.127376079559326, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 8, 
+                                                    "trace_id": "f5ffd7fa-5396-4fd3-8cb8-618de4e4c834", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091402.184809, 
+                                            "started_at": 1574091392.368825, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091396.430052, 
+                                                    "started_at": 1574091395.82311, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091401.735912, 
+                                                    "started_at": 1574091396.43014, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091402.184741, 
+                                                    "started_at": 1574091401.736032, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091404.496151, 
+                                            "started_at": 1574091402.184857, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091392.39676, 
+                                    "error": [], 
+                                    "duration": 13.072747945785522, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 7, 
+                                                    "trace_id": "03b1a5fe-b3bf-43d7-909e-8c8b146e2503", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091402.273933, 
+                                            "started_at": 1574091392.396788, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091396.430389, 
+                                                    "started_at": 1574091395.844827, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091401.913274, 
+                                                    "started_at": 1574091396.430469, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091402.273743, 
+                                                    "started_at": 1574091401.913425, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091405.469502, 
+                                            "started_at": 1574091402.27402, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091395.043399, 
+                                    "error": [], 
+                                    "duration": 15.823102951049805, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 9, 
+                                                    "trace_id": "7bf1081d-a6bd-4c25-8014-4fc0db3a0646", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091408.36813, 
+                                            "started_at": 1574091395.04345, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091402.187336, 
+                                                    "started_at": 1574091398.305467, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091408.062534, 
+                                                    "started_at": 1574091402.187483, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091408.368035, 
+                                                    "started_at": 1574091408.062657, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091410.866496, 
+                                            "started_at": 1574091408.368197, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091395.0434, 
+                                    "error": [], 
+                                    "duration": 10.669051885604858, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 10, 
+                                                    "trace_id": "b2913480-6c0a-4ed0-b428-6adb5b450636", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091402.902779, 
+                                            "started_at": 1574091395.043445, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091398.394003, 
+                                                    "started_at": 1574091397.977315, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091402.750126, 
+                                                    "started_at": 1574091398.394115, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091402.902711, 
+                                                    "started_at": 1574091402.750244, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091405.712444, 
+                                            "started_at": 1574091402.902827, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091406.328189, 
+                                    "error": [], 
+                                    "duration": 15.933768033981323, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 11, 
+                                                    "trace_id": "ab5f1564-aaff-4236-aaae-94cc215e04e5", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091417.212058, 
+                                            "started_at": 1574091406.328219, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091410.008513, 
+                                                    "started_at": 1574091409.583703, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091416.941559, 
+                                                    "started_at": 1574091410.008603, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091417.211972, 
+                                                    "started_at": 1574091416.9417, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091422.261951, 
+                                            "started_at": 1574091417.212118, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091407.318725, 
+                                    "error": [], 
+                                    "duration": 15.167106866836548, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 12, 
+                                                    "trace_id": "fa4798aa-255a-4e74-b44b-140b748787af", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091417.343318, 
+                                            "started_at": 1574091407.318745, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091411.24811, 
+                                                    "started_at": 1574091410.495535, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091417.070534, 
+                                                    "started_at": 1574091411.248261, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091417.343243, 
+                                                    "started_at": 1574091417.070681, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091422.485822, 
+                                            "started_at": 1574091417.343383, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091407.683468, 
+                                    "error": [], 
+                                    "duration": 16.485785007476807, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 14, 
+                                                    "trace_id": "d5da3d08-b4a5-4710-b749-93267b13a32c", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091418.472313, 
+                                            "started_at": 1574091407.683496, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091411.676608, 
+                                                    "started_at": 1574091411.003515, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091418.241661, 
+                                                    "started_at": 1574091411.676718, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091418.472175, 
+                                                    "started_at": 1574091418.241789, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091424.169246, 
+                                            "started_at": 1574091418.472402, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091407.881379, 
+                                    "error": [], 
+                                    "duration": 16.627405166625977, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 13, 
+                                                    "trace_id": "163e7a9a-aa08-435d-9660-94375e44ded8", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091418.475329, 
+                                            "started_at": 1574091407.881398, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091411.76614, 
+                                                    "started_at": 1574091411.160026, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091418.242936, 
+                                                    "started_at": 1574091411.766258, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091418.475156, 
+                                                    "started_at": 1574091418.243022, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091424.508776, 
+                                            "started_at": 1574091418.475414, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091412.443156, 
+                                    "error": [], 
+                                    "duration": 10.263727903366089, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 15, 
+                                                    "trace_id": "17dc7d8c-c798-4afb-b571-86e90ffcb790", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091420.130568, 
+                                            "started_at": 1574091412.443178, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091415.301961, 
+                                                    "started_at": 1574091415.044145, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091419.678422, 
+                                                    "started_at": 1574091415.302044, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091420.130463, 
+                                                    "started_at": 1574091419.678508, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091422.706875, 
+                                            "started_at": 1574091420.130635, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091424.276408, 
+                                    "error": [], 
+                                    "duration": 11.26658010482788, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 17, 
+                                                    "trace_id": "02dab319-35dd-48a1-8704-d8245536f5d3", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091431.949432, 
+                                            "started_at": 1574091424.276427, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091428.117188, 
+                                                    "started_at": 1574091427.666861, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091431.691272, 
+                                                    "started_at": 1574091428.117274, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091431.94934, 
+                                                    "started_at": 1574091431.691365, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091435.542977, 
+                                            "started_at": 1574091431.9495, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091424.276508, 
+                                    "error": [], 
+                                    "duration": 14.151201009750366, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 16, 
+                                                    "trace_id": "784dbedd-6f6c-4df4-96a3-c13171d15062", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091434.939352, 
+                                            "started_at": 1574091424.276536, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091428.336675, 
+                                                    "started_at": 1574091427.787585, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091434.095742, 
+                                                    "started_at": 1574091428.33676, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091434.939262, 
+                                                    "started_at": 1574091434.095897, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091438.427702, 
+                                            "started_at": 1574091434.93942, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091424.512444, 
+                                    "error": [], 
+                                    "duration": 13.864870071411133, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 18, 
+                                                    "trace_id": "031df446-a383-41af-a8d3-134cea447471", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091434.937836, 
+                                            "started_at": 1574091424.512475, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091428.222203, 
+                                                    "started_at": 1574091427.666844, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091434.097675, 
+                                                    "started_at": 1574091428.222395, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091434.937695, 
+                                                    "started_at": 1574091434.097784, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091438.377308, 
+                                            "started_at": 1574091434.937953, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091426.230125, 
+                                    "error": [], 
+                                    "duration": 11.083157062530518, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 19, 
+                                                    "trace_id": "927ca79a-5d55-4d79-b434-093b49a98ab5", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091435.5433, 
+                                            "started_at": 1574091426.230146, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091429.767613, 
+                                                    "started_at": 1574091429.161995, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091435.301405, 
+                                                    "started_at": 1574091429.767693, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091435.54319, 
+                                                    "started_at": 1574091435.301632, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091437.313272, 
+                                            "started_at": 1574091435.543378, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "timestamp": 1574091426.340709, 
+                                    "error": [], 
+                                    "duration": 11.13943099975586, 
+                                    "output": {
+                                        "additive": [], 
+                                        "complete": [
+                                            {
+                                                "chart_plugin": "OSProfiler", 
+                                                "data": {
+                                                    "taskID": "c0ee60f8-83ee-4d27-bc05-bfd7e1a319c6", 
+                                                    "workload_uuid": "a9e9a54d-4cf1-4aa2-961d-968e43bc638e", 
+                                                    "iteration": 20, 
+                                                    "trace_id": "f4e90984-3889-49fa-b5dd-77ba42029704", 
+                                                    "conn_str": null
+                                                }, 
+                                                "title": "OSProfiler Trace-ID"
+                                            }
+                                        ]
+                                    }, 
+                                    "idle_duration": 0.0, 
+                                    "atomic_actions": [
+                                        {
+                                            "finished_at": 1574091435.301788, 
+                                            "started_at": 1574091426.340729, 
+                                            "name": "glance_v2.create_image", 
+                                            "children": [
+                                                {
+                                                    "finished_at": 1574091429.767704, 
+                                                    "started_at": 1574091429.161995, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091435.00599, 
+                                                    "started_at": 1574091429.767783, 
+                                                    "name": "glance_v2.upload_data", 
+                                                    "children": []
+                                                }, 
+                                                {
+                                                    "finished_at": 1574091435.301616, 
+                                                    "started_at": 1574091435.006153, 
+                                                    "name": "glance_v2.get_image", 
+                                                    "children": []
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "finished_at": 1574091437.480132, 
+                                            "started_at": 1574091435.301909, 
+                                            "name": "glance_v2.delete_image", 
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ], 
+                            "failed_iteration_count": 0, 
+                            "total_iteration_count": 20, 
+                            "created_at": "2019-11-18T15:36:12", 
+                            "updated_at": "2019-11-18T15:37:24", 
+                            "contexts": {
+                                "users": {
+                                    "users_per_tenant": 3, 
+                                    "tenants": 2
+                                }
+                            }, 
+                            "contexts_results": [
+                                {
+                                    "setup": {
+                                        "finished_at": 1574091375.42212, 
+                                        "started_at": 1574091372.205806, 
+                                        "atomic_actions": [], 
+                                        "error": null
+                                    }, 
+                                    "cleanup": {
+                                        "finished_at": 1574091443.837982, 
+                                        "started_at": 1574091439.303191, 
+                                        "atomic_actions": [], 
+                                        "error": null
+                                    }, 
+                                    "plugin_cfg": {
+                                        "user_domain": "Default", 
+                                        "project_domain": "Default", 
+                                        "user_choice_method": "random", 
+                                        "users_per_tenant": 3, 
+                                        "tenants": 2, 
+                                        "resource_management_workers": 20
+                                    }, 
+                                    "plugin_name": "users@openstack"
+                                }, 
+                                {
+                                    "setup": {
+                                        "finished_at": 1574091375.422523, 
+                                        "started_at": 1574091375.422521, 
+                                        "atomic_actions": [], 
+                                        "error": null
+                                    }, 
+                                    "cleanup": {
+                                        "finished_at": 1574091439.302851, 
+                                        "started_at": 1574091438.450913, 
+                                        "atomic_actions": [], 
+                                        "error": null
+                                    }, 
+                                    "plugin_cfg": [
+                                        "glance"
+                                    ], 
+                                    "plugin_name": "cleanup@openstack"
+                                }
+                            ], 
+                            "position": 0, 
+                            "pass_sla": true, 
+                            "sla_results": {
+                                "sla": [
+                                    {
+                                        "criterion": "failure_rate", 
+                                        "detail": "Failure rate criteria 0.00% <= 0.00% <= 100.00% - Passed", 
+                                        "success": true
+                                    }
+                                ]
+                            }, 
+                            "sla": {
+                                "failure_rate": {
+                                    "max": 100
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

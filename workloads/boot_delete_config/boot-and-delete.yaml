@@ -1,0 +1,30 @@
+{% set flavor_name = flavor_name or "m1.medium" %}
+---
+  NovaServers.boot_and_delete_server:
+    -
+      args:
+        flavor:
+            name: "{{flavor_name}}"
+        image:
+            name: "ubuntu-18.04"
+        force_delete: true
+      runner:
+        type: "constant"
+        times: 2000
+        concurrency: 2
+      context:
+        users:
+          tenants: 3
+          users_per_tenant: 2
+      sla:
+        failure_rate:
+          max: 100
+      hooks:
+        - name: sys_call
+          description: Run script
+          args: sh ./restart_nova_container.sh
+          trigger:
+            name: event
+            args:
+              unit: iteration
+              at: [250,500,750,1000,1250,1500,2000,2250,2500,2750,3000,3250,3500,3750,4000,4250,4500,4750,5000,5250,5500,5750,6000,6250,6500,6750,7000]
