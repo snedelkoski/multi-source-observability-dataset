@@ -3,18 +3,37 @@ This repository contains the simple scripts for data statistics, and link to the
 
 You may find details of this dataset from the original paper: 
 
-*Sasho Nedelkoski, Ajay Kumar Mandapati, Jasmin Bogatinovski, Soeren Becker, Jorge Cardoso, Odej Kao, "Multi-Source Distributed System Data for AI-powered Analytics".* [link very soon]
+*Sasho Nedelkoski, Jasmin Bogatinovski, Ajay Kumar Mandapati, Soeren Becker, Jorge Cardoso, Odej Kao, "Multi-Source Distributed System Data for AI-powered Analytics".* [link very soon]
 
 <b>If you use the data, implementation, or any details of the paper, please cite!</b>
 
-The multi-source/multimodal dataset is composed of distributed traces, application logs, and metrics produced from running a complex distributed system (Openstack). In addition, we also provide the workload and fault scripts together with the Rally report which can serve as ground truth (all at the Zenodo link below). We provide two datasets, which differ on how the workload is executed. The <b>*multimodal sequential-workload data*</b> is generated via executing workload of sequential user requests. The <b>*multimodal concurrent-workload data*</b> is generated via executing workload of concurrent user requests. 
+Abstract:
 
-The difference of the *<b>concurrent</b>* dataset is that:
-1. Due to the heavy load on the control node, the metric data for wally113 (control node) is not representative and we excluded it.
-2. Three rally actions are executed in parallel: boot_and_delete, create_and_delete_networks, create_and_delete_image, whereas for the *<b>sequential</b>* there were 5 actions executed. 
+In recent years there has been an increased interest in Artificial Intelligence for IT Operations (AIOps). This field utilizes monitoring data from IT systems, big data platforms, and machine learning to automate various operations and maintenance (O&M) tasks for distributed systems.
+The major contributions have been materialized in the form of novel algorithms.
+Typically, researchers took the challenge of exploring one specific type of observability data sources, such as application logs, metrics, and distributed traces, to create new algorithms.
+Nonetheless, due to the low signal-to-noise ratio of monitoring data, there is a consensus that only the analysis of multi-source monitoring data will enable the development of useful algorithms that have better performance.  
+Unfortunately, existing datasets usually contain only a single source of data, often logs or metrics. This limits the possibilities for greater advances in AIOps research.
+Thus, we generated high-quality multi-source data composed of distributed traces, application logs, and metrics from a complex distributed system. This paper provides detailed descriptions of the experiment, statistics of the data, and identifies how such data can be analyzed to support O&M tasks such as anomaly detection, root cause analysis, and remediation.
 
-The raw logs in both datasets contain the same files. If the user wants the logs filetered by time with respect to the two datasets, should refer to the timestamps at the metrics (they provide the time window). <b>In addition, we suggest to use the provided aggregated time ranged logs for both datasets in CSV format.
-  
-<b>Important:</b> The logs and the metrics are synchronized with respect time and they are both recorded on CEST (central european standard time). The traces are on UTC (Coordinated Universal Time -2 hours). They should be synchronized if the user develops multimodal methods.
+General Information:
+
+This repository contains the simple scripts for data statistics, and link to the multi-source distributed system dataset.
+
+You may find details of this dataset from the original paper:
+
+Sasho Nedelkoski, Ajay Kumar Mandapati, Jasmin Bogatinovski, Soeren Becker, Jorge Cardoso, Odej Kao, "Multi-Source Distributed System Data for AI-powered Analytics". [link very soon]
+
+If you use the data, implementation, or any details of the paper, please cite!
+
+The multi-source/multimodal dataset is composed of distributed traces, application logs, and metrics produced from running a complex distributed system (Openstack). In addition, we also provide the workload and fault scripts together with the Rally report which can serve as ground truth (all at the Zenodo link below). We provide two datasets, which differ on how the workload is executed. The sequential_data is generated via executing workload of sequential user requests. The concurrent_data is generated via executing workload of concurrent user requests.
+
+The difference of the concurrent dataset is that:
+
+Due to the heavy load on the control node, the metric data for wally113 (control node) is not representative and we excluded it.
+Three rally actions are executed in parallel: boot_and_delete, create_and_delete_networks, create_and_delete_image, whereas for the sequential there were 5 actions executed.
+The raw logs in both datasets contain the same files. If the user wants the logs filetered by time with respect to the two datasets, should refer to the timestamps at the metrics (they provide the time window). In addition, we suggest to use the provided aggregated time ranged logs for both datasets in CSV format.
+
+Important: The logs and the metrics are synchronized with respect time and they are both recorded on CEST (central european standard time). The traces are on UTC (Coordinated Universal Time -2 hours). They should be synchronized if the user develops multimodal methods. Please read the IMPORTANT_experiment_start_end.txt file before working with the data.
 
 If you are interested in these data, please request the data via <a href="url">Zenodo</a>. Kindly note that the affiliation, and information about the utilization of the dataset. If you do not receive any response from Zenodo within one week, please check your spam mailbox or consider to resubmit your data request with the required information.
