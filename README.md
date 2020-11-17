@@ -5,7 +5,8 @@ You may find details of this dataset from the original paper:
 
 *Sasho Nedelkoski, Jasmin Bogatinovski, Ajay Kumar Mandapati, Soeren Becker, Jorge Cardoso, Odej Kao, "Multi-Source Distributed System Data for AI-powered Analytics".*
 
-<code>
+
+<pre><code>
 @inproceedings{nedelkoski2020multi,
   title={Multi-source Distributed System Data for AI-Powered Analytics},
   author={Nedelkoski, Sasho and Bogatinovski, Jasmin and Mandapati, Ajay Kumar and Becker, Soeren and Cardoso, Jorge and Kao, Odej},
@@ -14,7 +15,7 @@ You may find details of this dataset from the original paper:
   year={2020},
   organization={Springer}
 }
-  </code>
+  </code></pre>
 
 <b>If you use the data, implementation, or any details of the paper, please cite!</b>
 
