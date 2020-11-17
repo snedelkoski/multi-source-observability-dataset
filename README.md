@@ -3,7 +3,16 @@ This repository contains the simple scripts for data statistics, and link to the
 
 You may find details of this dataset from the original paper: 
 
-*Sasho Nedelkoski, Jasmin Bogatinovski, Ajay Kumar Mandapati, Soeren Becker, Jorge Cardoso, Odej Kao, "Multi-Source Distributed System Data for AI-powered Analytics".* [link very soon]
+*Sasho Nedelkoski, Jasmin Bogatinovski, Ajay Kumar Mandapati, Soeren Becker, Jorge Cardoso, Odej Kao, "Multi-Source Distributed System Data for AI-powered Analytics".*
+
+@inproceedings{nedelkoski2020multi,
+  title={Multi-source Distributed System Data for AI-Powered Analytics},
+  author={Nedelkoski, Sasho and Bogatinovski, Jasmin and Mandapati, Ajay Kumar and Becker, Soeren and Cardoso, Jorge and Kao, Odej},
+  booktitle={European Conference on Service-Oriented and Cloud Computing},
+  pages={161--176},
+  year={2020},
+  organization={Springer}
+}
 
 <b>If you use the data, implementation, or any details of the paper, please cite!</b>
 
